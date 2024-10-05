@@ -1,3 +1,4 @@
+/* * Setting the default design */
 body {
   background-color: #001845;
   color: #979DAC;
@@ -9,6 +10,7 @@ h1 {
   margin: 0;
 }
 
+/* * Sets design of the anchor elements */
 a {
   text-decoration: none;
   color: #979DAC;
@@ -20,6 +22,7 @@ nav {
   align-content: center;
 }
 
+/* * Makes the header, main and footer containers grids */
 header, main, footer {
   display: grid;
   grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) minmax(auto, 500px) 1fr;
@@ -31,10 +34,12 @@ main {
   grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) auto 1fr;
 }
 
+/* * Changes bcaground colour of the header and footer sections */
 header, footer {
   background-color: #001233;
 }
 
+/* * Positions the h1 and nav containers in the header */
 header a {
   grid-column: 2;
   text-wrap: nowrap;
@@ -48,6 +53,7 @@ header nav {
   align-items: center;
 }
 
+/* * Adds lines between the anchor elements inside the nav section */
 header nav a {
   border-style: none solid none none;
   border-image: linear-gradient(to bottom, #00000000 0%, #979DAC 50%, #00000000 100%) 1;
@@ -61,6 +67,7 @@ main {
   margin: 20px;
 }
 
+/* * Positions the introduction box in the main section*/
 main div {
   display: flex;
   flex-direction: column;
@@ -83,6 +90,7 @@ h3 {
   font-size: x-large;
 }
 
+/* * Positions the footer section at the bottom of the webpage */
 footer {
   justify-content: center;
   position: absolute;
@@ -91,22 +99,26 @@ footer {
   left: 0;
 }
 
+/* * Positions the links in the footer section */
 #footer-links {
   display: flex;
   grid-column: 2 / span 3;
   justify-self: center;
 }
 
+/* * Positions the image in the main container */
 img {
   max-width: 300px;
   margin: 0 20px;
   justify-self: flex-end;
 }
 
+/* * Sets the colour of the footer links */
 svg {
   fill: #979DAC;
 }
 
+/* * Changes the webpage layout if the screen width is smaller than 724px */
 @media (max-width: 724px) {
   header a, header nav {
     grid-column: 2 / span 3;
