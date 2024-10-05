@@ -40,13 +40,22 @@ nav {
 /* * Makes the header, main and footer containers grids */
 header, main, footer {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 300px) minmax(0, 400px) minmax(auto, 500px) 1fr;
   gap: 0 30px;
   padding: 0 20px;
 }
 
+header {
+  grid-template-columns: 1fr minmax(auto, 300px) minmax(0, 400px) minmax(auto, 500px) 1fr;
+  align-self: flex-start;
+}
+
 main {
   grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) auto 1fr;
+  align-self: flex-start;
+}
+
+footer {
+  grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px) 1fr;
   align-self: flex-start;
 }
 
@@ -117,9 +126,15 @@ footer {
 
 /* * Positions the links in the footer section */
 #footer-links {
+  flex-grow: 1;
   display: flex;
-  grid-column: 2 / span 3;
+  grid-column: 3;
   justify-self: center;
+}
+
+#image-source {
+  grid-column: 4;
+  justify-self: flex-end;
 }
 
 /* * Positions the image in the main container */
