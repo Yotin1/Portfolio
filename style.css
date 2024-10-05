@@ -2,6 +2,10 @@
 /* * Body is a grid to align the header, main and footer containers */
 body {
   background-color: #001845;
+  background-image: url(assets/eye.svg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: calc(50% - 600px) top;
   color: #979DAC;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -12,6 +16,13 @@ body {
 
 h1 {
   margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: transparent;
+  background-image: repeating-linear-gradient(to right, #979DAC, #979DAC90 10%, #979DAC 20%);
+  background-clip: text;
 }
 
 /* * Sets design of the anchor elements */
@@ -29,7 +40,7 @@ nav {
 /* * Makes the header, main and footer containers grids */
 header, main, footer {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) minmax(auto, 500px) 1fr;
+  grid-template-columns: 1fr minmax(auto, 300px) minmax(0, 400px) minmax(auto, 500px) 1fr;
   gap: 0 30px;
   padding: 0 20px;
 }
@@ -70,10 +81,12 @@ header nav a {
 
 main {
   margin: 100px 20px 20px 20px;
+  row-gap: 30px;
 }
 
 /* * Positions the introduction box in the main section*/
 main div {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   grid-column: 2 / span 2;
@@ -83,16 +96,18 @@ main div {
   background-color: #001233;
 }
 
-h2, h3 {
+h2, h3, p {
   margin: 0;
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: 70px;
+  color: #2388ec;
+  margin: 5px 0;
 }
 
 h3 {
-  font-size: x-large;
+  font-size: 50px;
 }
 
 /* * Positions the footer section at the bottom of the webpage */
@@ -116,11 +131,31 @@ img {
 
 /* * Sets the colour of the footer links */
 svg {
-  fill: #979DAC;
+  fill: #979dac;
 }
 
-/* * Changes the webpage layout if the screen width is smaller than 724px */
-@media (max-width: 724px) {
+/* * Media Queries */
+/* * Snaps background image to left of the page */
+@media (max-width: 1380px) {
+  body {
+    background-position: calc(80px - 500px) top;
+  }
+}
+
+/* * Stacks image above the introduction */
+@media (max-width: 1000px) {
+  img {
+    grid-column: 2 / span 3;
+    justify-self: center;
+  }
+  main div {
+    order: 1;
+    grid-column: 2 / span 3;
+  }
+}
+
+/* * Stacks header links below h1 */
+@media (max-width: 758px) {
   header a, header nav {
     grid-column: 2 / span 3;
     justify-self: center;
