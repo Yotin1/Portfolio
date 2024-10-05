@@ -1,9 +1,13 @@
 /* * Setting the default design */
+/* * Body is a grid to align the header, main and footer containers */
 body {
   background-color: #001845;
   color: #979DAC;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 h1 {
@@ -32,6 +36,7 @@ header, main, footer {
 
 main {
   grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) auto 1fr;
+  align-self: flex-start;
 }
 
 /* * Changes bcaground colour of the header and footer sections */
@@ -64,7 +69,7 @@ header nav a {
 }
 
 main {
-  margin: 20px;
+  margin: 100px 20px 20px 20px;
 }
 
 /* * Positions the introduction box in the main section*/
@@ -93,10 +98,6 @@ h3 {
 /* * Positions the footer section at the bottom of the webpage */
 footer {
   justify-content: center;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
 }
 
 /* * Positions the links in the footer section */
