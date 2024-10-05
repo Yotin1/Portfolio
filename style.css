@@ -85,7 +85,7 @@ main {
 }
 
 /* * Positions the introduction box in the main section*/
-main div {
+main section {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -148,7 +148,7 @@ svg {
     grid-column: 2 / span 3;
     justify-self: center;
   }
-  main div {
+  main section {
     order: 1;
     grid-column: 2 / span 3;
   }
