@@ -52,10 +52,9 @@ footer {
 }
 
 header {
-  grid-template-columns: 1fr minmax(auto, 300px) minmax(0, 400px) minmax(
-      auto,
-      500px
-    ) 1fr;
+  grid-template-columns:
+    1fr minmax(auto, 300px) minmax(0, 400px) minmax(auto, 500px)
+    1fr;
   align-self: flex-start;
 }
 
@@ -65,10 +64,9 @@ main {
 }
 
 footer {
-  grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 400px) minmax(
-      auto,
-      400px
-    ) 1fr;
+  grid-template-columns:
+    1fr minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px)
+    1fr;
   align-self: flex-start;
 }
 
@@ -157,6 +155,7 @@ footer {
 #image-source {
   grid-column: 4;
   justify-self: flex-end;
+  text-wrap: nowrap;
 }
 
 /* * Positions the image in the main container */
