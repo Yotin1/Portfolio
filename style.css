@@ -6,8 +6,8 @@ body {
   background-repeat: no-repeat;
   background-size: 1000px;
   background-position: calc(50% - 600px) top;
-  color: #979DAC;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #979dac;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   display: grid;
   min-height: 100vh;
@@ -21,14 +21,19 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: transparent;
-  background-image: repeating-linear-gradient(to right, #979DAC, #979DAC90 10%, #979DAC 20%);
+  background-image: repeating-linear-gradient(
+    to right,
+    #979dac,
+    #979dac90 10%,
+    #979dac 20%
+  );
   background-clip: text;
 }
 
 /* * Sets design of the anchor elements */
 a {
   text-decoration: none;
-  color: #979DAC;
+  color: #979dac;
   padding: 10px;
   font-size: large;
 }
@@ -38,14 +43,19 @@ nav {
 }
 
 /* * Makes the header, main and footer containers grids */
-header, main, footer {
+header,
+main,
+footer {
   display: grid;
   gap: 0 30px;
   padding: 0 20px;
 }
 
 header {
-  grid-template-columns: 1fr minmax(auto, 300px) minmax(0, 400px) minmax(auto, 500px) 1fr;
+  grid-template-columns: 1fr minmax(auto, 300px) minmax(0, 400px) minmax(
+      auto,
+      500px
+    ) 1fr;
   align-self: flex-start;
 }
 
@@ -55,12 +65,16 @@ main {
 }
 
 footer {
-  grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px) 1fr;
+  grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 400px) minmax(
+      auto,
+      400px
+    ) 1fr;
   align-self: flex-start;
 }
 
 /* * Changes bcaground colour of the header and footer sections */
-header, footer {
+header,
+footer {
   background-color: #001233;
 }
 
@@ -81,7 +95,13 @@ header nav {
 /* * Adds lines between the anchor elements inside the nav section */
 header nav a {
   border-style: none solid none none;
-  border-image: linear-gradient(to bottom, #00000000 0%, #979DAC 50%, #00000000 100%) 1;
+  border-image: linear-gradient(
+      to bottom,
+      #00000000 0%,
+      #979dac 50%,
+      #00000000 100%
+    )
+    1;
 }
 
 #about {
@@ -105,7 +125,9 @@ main section {
   background-color: #001233;
 }
 
-h2, h3, p {
+h2,
+h3,
+p {
   margin: 0;
 }
 
@@ -157,21 +179,21 @@ svg {
   }
 }
 
-/* * Stacks image above the introduction */
+/* * Stacks image below the introduction */
 @media (max-width: 1000px) {
   img {
     grid-column: 2 / span 3;
     justify-self: center;
   }
   main section {
-    order: 1;
     grid-column: 2 / span 3;
   }
 }
 
 /* * Stacks header links below h1 */
 @media (max-width: 758px) {
-  header a, header nav {
+  header a,
+  header nav {
     grid-column: 2 / span 3;
     justify-self: center;
   }
