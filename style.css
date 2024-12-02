@@ -21,12 +21,7 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: transparent;
-  background-image: repeating-linear-gradient(
-    to right,
-    #979dac,
-    #979dac90 10%,
-    #979dac 20%
-  );
+  background-image: repeating-linear-gradient(to right, #979dac, #979dac90 10%, #979dac 20%);
   background-clip: text;
 }
 
@@ -42,9 +37,9 @@ nav {
   align-content: center;
 }
 
-/* * Makes the header, main and footer containers grids */
+/* * Makes the header, section and footer containers grids */
 header,
-main,
+main section,
 footer {
   display: grid;
   gap: 0 30px;
@@ -58,7 +53,7 @@ header {
   align-self: flex-start;
 }
 
-main {
+main section {
   grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) auto 1fr;
   align-self: flex-start;
 }
@@ -93,26 +88,20 @@ header nav {
 /* * Adds lines between the anchor elements inside the nav section */
 header nav a {
   border-style: none solid none none;
-  border-image: linear-gradient(
-      to bottom,
-      #00000000 0%,
-      #979dac 50%,
-      #00000000 100%
-    )
-    1;
+  border-image: linear-gradient(to bottom, #00000000 0%, #979dac 50%, #00000000 100%) 1;
 }
 
-#about {
+#aboutLink {
   border-left-style: solid;
 }
 
-main {
+main section {
   margin: 100px 20px 20px 20px;
   row-gap: 30px;
 }
 
-/* * Positions the introduction box in the main section*/
-main section {
+/* * Positions the introduction box in the about section*/
+main section div {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -158,7 +147,7 @@ footer {
   text-wrap: nowrap;
 }
 
-/* * Positions the image in the main container */
+/* * Positions the image in the about container */
 img {
   max-width: 300px;
   margin: 0 20px;
@@ -184,7 +173,7 @@ svg {
     grid-column: 2 / span 3;
     justify-self: center;
   }
-  main section {
+  main section div {
     grid-column: 2 / span 3;
   }
 }
