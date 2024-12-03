@@ -9,10 +9,10 @@ body {
   color: #979dac;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* * smooth scrolling */
@@ -47,26 +47,19 @@ nav {
 
 /* * Makes the header, section and footer containers grids */
 header,
-main section,
 footer {
   display: grid;
   gap: 0 30px;
   padding: 0 20px;
+  background-color: #001233;
 }
 
 header {
   grid-template-columns:
     1fr minmax(auto, 300px) minmax(0, 400px) minmax(auto, 500px)
     1fr;
-  align-self: flex-start;
   position: sticky;
   top: 0px;
-}
-
-/* * Changes bacground colour of the header and footer sections */
-header,
-footer {
-  background-color: #001233;
 }
 
 /* * Positions the h1 and nav containers in the header */
@@ -95,23 +88,30 @@ header nav a {
 
 /* ! Main Section */
 
-main section {
-  margin: 100px 20px 20px 20px;
-  row-gap: 30px;
-  grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) auto 1fr;
-  align-self: flex-start;
-}
-
-/* * Positions the introduction box in the about section*/
-main section div {
-  padding: 20px;
+main {
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  grid-column: 2 / span 2;
+  align-content: center;
+  flex-grow: 1;
+}
+
+main section {
+  max-width: 1380px;
+  padding: 0px 100px;
+}
+
+main section div {
+  padding: 20px;
   border-style: solid;
   border-radius: 10px;
   box-shadow: 5px 5px black;
   background-color: #001233;
+}
+
+#about {
+  display: flex;
+  gap: 20px;
 }
 
 h2,
@@ -130,13 +130,28 @@ h3 {
   font-size: 50px;
 }
 
+h3.sectionTitle {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#projects > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#projects div h3 {
+  grid-column: 1 / span 2;
+}
+
 /* ! Footer Section */
 
 footer {
   grid-template-columns:
     1fr minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px)
     1fr;
-  align-self: flex-start;
+  justify-self: flex-end;
   justify-content: center;
 }
 
@@ -167,6 +182,7 @@ svg {
 }
 
 /* ! Media Queries */
+
 /* * Snaps background image to left of the page */
 @media (max-width: 1380px) {
   body {
@@ -176,12 +192,12 @@ svg {
 
 /* * Stacks image below the introduction */
 @media (max-width: 1000px) {
-  img {
-    grid-column: 2 / span 3;
-    justify-self: center;
+  #about {
+    flex-direction: column-reverse;
   }
-  main section div {
-    grid-column: 2 / span 3;
+
+  #about img {
+    align-self: center;
   }
 }
 
@@ -194,7 +210,7 @@ svg {
   }
 }
 
-/* animated background */
+/* ! animated background */
 .star {
   display: block;
   background-color: #fff;
