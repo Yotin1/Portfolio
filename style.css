@@ -12,12 +12,15 @@ body {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
 }
 
-/* smooth scrolling */
+/* * smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
+
+/* ! Header Section */
 
 h1 {
   margin: 0;
@@ -56,21 +59,11 @@ header {
     1fr minmax(auto, 300px) minmax(0, 400px) minmax(auto, 500px)
     1fr;
   align-self: flex-start;
+  position: sticky;
+  top: 0px;
 }
 
-main section {
-  grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) auto 1fr;
-  align-self: flex-start;
-}
-
-footer {
-  grid-template-columns:
-    1fr minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px)
-    1fr;
-  align-self: flex-start;
-}
-
-/* * Changes bcaground colour of the header and footer sections */
+/* * Changes bacground colour of the header and footer sections */
 header,
 footer {
   background-color: #001233;
@@ -96,13 +89,17 @@ header nav a {
   border-image: linear-gradient(to bottom, #00000000 0%, #979dac 50%, #00000000 100%) 1;
 }
 
-#aboutLink {
+#projectsLink {
   border-left-style: solid;
 }
+
+/* ! Main Section */
 
 main section {
   margin: 100px 20px 20px 20px;
   row-gap: 30px;
+  grid-template-columns: 1fr minmax(auto, 200px) minmax(0, 500px) auto 1fr;
+  align-self: flex-start;
 }
 
 /* * Positions the introduction box in the about section*/
@@ -133,8 +130,13 @@ h3 {
   font-size: 50px;
 }
 
-/* * Positions the footer section at the bottom of the webpage */
+/* ! Footer Section */
+
 footer {
+  grid-template-columns:
+    1fr minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px)
+    1fr;
+  align-self: flex-start;
   justify-content: center;
 }
 
@@ -164,7 +166,7 @@ svg {
   fill: #979dac;
 }
 
-/* * Media Queries */
+/* ! Media Queries */
 /* * Snaps background image to left of the page */
 @media (max-width: 1380px) {
   body {
@@ -192,6 +194,7 @@ svg {
   }
 }
 
+/* animated background */
 .star {
   display: block;
   background-color: #fff;
