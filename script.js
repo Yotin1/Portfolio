@@ -21,7 +21,7 @@ let createStars = function () {
     star.style.height = star_radius.toString() + "px";
     star.style.width = star_radius.toString() + "px";
     star.style.animation = star_rotation + " " + random_number(6, 16).toString() + "s linear 0s infinite";
-    main.append(star);
+    document.body.append(star);
     stars.push(star);
   }
 };
