@@ -2,10 +2,6 @@
 /* * Body is a grid to align the header, main and footer containers */
 body {
   background-color: #001845;
-  background-image: url(assets/eye.svg);
-  background-repeat: no-repeat;
-  background-size: 1000px;
-  background-position: calc(50% - 600px) top;
   color: #979dac;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -18,7 +14,7 @@ body {
 /* * smooth scrolling */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 91px;
+  scroll-padding-top: 70px;
 }
 
 /* ! Header Section */
@@ -90,18 +86,23 @@ header nav a {
 /* ! Main Section */
 
 main {
-  gap: 20px;
+  gap: 30px;
   display: grid;
-  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+  grid-template-columns: 1fr minmax(0, 1300px) 1fr;
   max-width: 100vw;
   flex-grow: 1;
+  background-image: url(assets/eye.svg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: calc(50% - 600px) -150px;
 }
 
 main section {
   grid-column: 2 / 3;
-  max-width: 1380px;
-  padding: 0px 100px;
-  min-height: 100vh;
+  padding: 0px 60px;
+  min-height: calc(100vh - 63px);
+  display: flex;
+  align-items: center;
 }
 
 main section div {
@@ -110,10 +111,7 @@ main section div {
   border-radius: 10px;
   box-shadow: 5px 5px black;
   background-color: #001233;
-}
-
-main section > div {
-  margin-bottom: 80px;
+  flex-grow: 1;
 }
 
 #about {
@@ -122,6 +120,10 @@ main section > div {
   justify-content: center;
   gap: 20px;
 }
+
+/* #experience div {
+  flex-grow: 1;
+} */
 
 h2,
 h3,
@@ -152,6 +154,36 @@ h3.sectionTitle {
 
 #projects div h3 {
   grid-column: 1 / span 2;
+}
+
+.projectTitle {
+  grid-area: title;
+}
+.projectImage {
+  grid-area: image;
+  justify-self: center;
+}
+.projectDesc {
+  grid-area: desc;
+}
+.projectDemo {
+  grid-area: demo;
+}
+.projectGithub {
+  grid-area: github;
+}
+
+.project {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "image image"
+    "desc desc"
+    "demo github";
+}
+
+.project * {
+  text-align: center;
 }
 
 /* ! Footer Section */
@@ -193,14 +225,14 @@ svg {
 /* ! Media Queries */
 
 /* * Snaps background image to left of the page */
-@media (max-width: 1380px) {
-  body {
-    background-position: calc(80px - 500px) top;
+@media (max-width: 1359px) {
+  main {
+    background-position: calc(80px - 500px) -150px;
   }
 }
 
 /* * Stacks image below the introduction */
-@media (max-width: 1000px) {
+@media (max-width: 1020px) {
   #about {
     flex-direction: column-reverse;
     gap: 10px;
