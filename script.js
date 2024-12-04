@@ -16,7 +16,7 @@ let createStars = function () {
     let star_radius = random_number(0, 4);
     const star = document.createElement("div");
     star.className = "star";
-    star.style.top = random_number(header.offsetHeight, screen.height).toString() + "px";
+    star.style.top = (random_number(0, main.offsetHeight) + header.offsetHeight).toString() + "px";
     star.style.left = random_number(0, screen.width).toString() + "px";
     star.style.height = star_radius.toString() + "px";
     star.style.width = star_radius.toString() + "px";
@@ -29,7 +29,7 @@ let createStars = function () {
 let updateStars = function () {
   for (let star of stars) {
     if (
-      parseInt(star.style.top) < window.innerHeight - footer.offsetHeight + 16 &&
+      parseInt(star.style.top) < main.offsetHeight + header.offsetHeight + 16 &&
       parseInt(star.style.left) < window.innerWidth + 12
     ) {
       star.style.display = "initial";
@@ -39,6 +39,7 @@ let updateStars = function () {
   }
 };
 
+console.log(main.offsetHeight);
 createStars();
 updateStars();
 
