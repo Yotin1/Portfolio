@@ -19,7 +19,7 @@ html {
 
 /* ! Header Section */
 
-h1 {
+h2 {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
@@ -79,7 +79,7 @@ header nav a {
   border-image: linear-gradient(to bottom, #00000000 0%, #979dac 50%, #00000000 100%) 1;
 }
 
-#projectsLink {
+#aboutLink {
   border-left-style: solid;
 }
 
@@ -115,7 +115,7 @@ main section div {
   flex-grow: 1;
 }
 
-#about {
+#home {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,13 +126,13 @@ main section div {
   flex-grow: 1;
 } */
 
-h2,
+h1,
 h3,
 p {
   margin: 0;
 }
 
-h2 {
+h1 {
   font-size: 70px;
   color: #2388ec;
   margin: 5px 0;
@@ -238,16 +238,16 @@ svg {
 
 /* * Stacks image below the introduction */
 @media (max-width: 1020px) {
-  #about {
+  #home {
     flex-direction: column-reverse;
     gap: 20px;
   }
 
-  #about div {
+  #home div {
     flex-grow: 0;
   }
 
-  #about img {
+  #home img {
     align-self: center;
   }
 }
