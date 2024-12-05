@@ -256,9 +256,9 @@ svg {
 /* ! Media Queries */
 
 /* * Snaps background image to left of the page */
-@media (max-width: 1203px) {
+@media (max-width: 1150px) {
   main {
-    background-position: calc(100px - 500px) calc(50vh - 470px);
+    background-position: calc(75px - 500px) calc(50vh - 470px);
   }
 }
 
