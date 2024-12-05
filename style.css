@@ -3,7 +3,9 @@
 body {
   background-color: #001845;
   color: #979dac;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   overflow-x: hidden;
   min-height: 100vh;
@@ -25,6 +27,7 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  font-size: 2em;
   color: transparent;
   background-image: repeating-linear-gradient(to right, #979dac, #979dac90 10%, #979dac 20%);
   background-clip: text;
@@ -32,6 +35,10 @@ h2 {
 
 /* * Sets design of the anchor elements */
 a {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
   text-decoration: none;
   color: #979dac;
   padding: 10px;
@@ -95,7 +102,7 @@ main {
   background-image: url(assets/eye.svg);
   background-repeat: no-repeat;
   background-size: 1000px;
-  background-position: calc(50% - 600px) calc(50vh - 470px);
+  background-position: calc(50% - 500px) calc(50vh - 470px);
 }
 
 main section {
@@ -120,6 +127,12 @@ main section div {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  text-align: center;
+}
+
+#home div {
+  flex-grow: 0;
+  padding: 30px;
 }
 
 /* #experience div {
@@ -133,6 +146,10 @@ p {
 }
 
 h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
   font-size: 70px;
   color: #2388ec;
   margin: 5px 0;
@@ -140,6 +157,15 @@ h1 {
 
 h3 {
   font-size: 50px;
+}
+
+#homeSubtitle {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 30px;
+  color: #003aa7;
 }
 
 h3.sectionTitle {
@@ -217,7 +243,7 @@ footer {
 
 /* * Positions the image in the about container */
 img {
-  max-width: 300px;
+  width: 300px;
   margin: 0 20px;
   justify-self: flex-end;
 }
@@ -230,14 +256,18 @@ svg {
 /* ! Media Queries */
 
 /* * Snaps background image to left of the page */
-@media (max-width: 1359px) {
+@media (max-width: 1203px) {
   main {
-    background-position: calc(80px - 500px) calc(50vh - 500px);
+    background-position: calc(100px - 500px) calc(50vh - 470px);
   }
 }
 
 /* * Stacks image below the introduction */
-@media (max-width: 1020px) {
+@media (max-width: 1004px) {
+  main section {
+    padding: 0px;
+  }
+
   #home {
     flex-direction: column-reverse;
     gap: 20px;
@@ -253,7 +283,7 @@ svg {
 }
 
 /* * Stacks header links below h1 */
-@media (max-width: 758px) {
+@media (max-width: 644px) {
   header a,
   header nav {
     grid-column: 2 / span 3;
@@ -261,6 +291,23 @@ svg {
   }
   html {
     scroll-padding-top: 115px;
+  }
+  #home {
+    h1 {
+      font-size: 50px;
+      color: #2388ec;
+      margin: 5px 0;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+
+    #homeSubtitle {
+      /* margin-top: 30px; */
+      font-size: 20px;
+      color: #003aa7;
+    }
   }
 }
 
