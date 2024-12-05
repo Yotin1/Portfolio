@@ -183,7 +183,8 @@ h3.sectionTitle {
   box-shadow: none;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  /* grid-auto-flow: column; */
   text-align: center;
 }
 
@@ -265,6 +266,7 @@ img {
 /* * Sets the colour of the footer links */
 svg {
   fill: #979dac;
+  /* width: 100px; */
 }
 
 /* ! Media Queries */
