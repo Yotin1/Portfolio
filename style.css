@@ -152,11 +152,12 @@ h1 {
   font-style: normal;
   font-size: 70px;
   color: #2388ec;
-  margin: 5px 0;
+  margin: 20px 0px 5px;
 }
 
 h3 {
   font-size: 50px;
+  margin-bottom: 20px;
 }
 
 #homeSubtitle {
@@ -169,7 +170,20 @@ h3 {
 }
 
 h3.sectionTitle {
-  padding-bottom: 20px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  /* padding-bottom: 20px; */
+  text-align: center;
+}
+
+#skills {
+  border: none;
+  box-shadow: none;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
   text-align: center;
 }
 
