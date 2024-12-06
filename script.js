@@ -60,7 +60,7 @@ async function loadProjects(file) {
             />
             <p class="projectDesc">${project["desc"] == "" ? "Description" : project["desc"]}</p>`;
     if (project["demo"] != "") {
-      projectContainer.innerHTML += `<a class="projectDemo" href="${project["demo"]}" target="_blank">Live Demo</a>
+      projectContainer.innerHTML += `<a class="projectDemo" href="${project["demo"][1]}" target="_blank">${project["demo"][0]}</a>
             <a class="projectGithub" href="${project["github"]}" target="_blank">Github</a>`;
     } else {
       projectContainer.innerHTML += `<a class="projectGithub projectDemo" href="${project["github"]}" target="_blank">Github</a>`;

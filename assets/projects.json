@@ -2,14 +2,17 @@
   "FFXIV Materia Calculator": {
     "image": "",
     "desc": "",
-    "demo": "https://yotin1.github.io/Materia-Calculator/",
+    "demo": ["Live Demo", "https://yotin1.github.io/Materia-Calculator/"],
     "github": "https://github.com/Yotin1/Materia-Calculator"
   },
 
   "Student Enrolment Database": {
     "image": "",
     "desc": "",
-    "demo": "https://github.com/Yotin1/School-Enrolment-SQL-Project/blob/main/Documentation/Documentation.md",
+    "demo": [
+      "Documentation",
+      "https://github.com/Yotin1/School-Enrolment-SQL-Project/blob/main/Documentation/Documentation.md"
+    ],
     "github": "https://github.com/Yotin1/School-Enrolment-SQL-Project"
   },
 
