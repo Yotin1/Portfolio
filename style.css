@@ -179,11 +179,14 @@ h3.sectionTitle {
 #projects > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
 }
 
 #projects div h3 {
   grid-column: 1 / span 2;
+}
+
+h4 {
+  font-size: 30px;
 }
 
 .projectTitle {
@@ -214,6 +217,7 @@ h3.sectionTitle {
     "image image"
     "desc desc"
     "demo github";
+  margin: 50px;
 }
 
 .project * {
