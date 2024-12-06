@@ -3,14 +3,19 @@
 body {
   background-color: #001845;
   color: #979dac;
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 400;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
   font-style: normal;
   margin: 0;
   overflow-x: hidden;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+p {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* * smooth scrolling */
@@ -23,26 +28,20 @@ html {
 
 h2 {
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
   font-size: 2em;
   color: transparent;
   background-image: repeating-linear-gradient(to right, #979dac, #979dac90 10%, #979dac 20%);
   background-clip: text;
+  font-weight: 900;
 }
 
 /* * Sets design of the anchor elements */
 a {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
   text-decoration: none;
   color: #979dac;
   padding: 10px;
   font-size: large;
+  font-weight: 500;
 }
 
 nav {
@@ -135,10 +134,6 @@ main section div {
   padding: 30px;
 }
 
-/* #experience div {
-  flex-grow: 1;
-} */
-
 h1,
 h3,
 p {
@@ -146,10 +141,6 @@ p {
 }
 
 h1 {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
   font-size: 70px;
   color: #2388ec;
   margin: 20px 0px 5px;
@@ -161,19 +152,11 @@ h3 {
 }
 
 #homeSubtitle {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
   font-size: 30px;
   color: #003aa7;
 }
 
 h3.sectionTitle {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
   /* padding-bottom: 20px; */
   text-align: center;
 }
@@ -185,7 +168,12 @@ h3.sectionTitle {
   grid-template-rows: auto auto;
   grid-auto-flow: column;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+
+  svg {
+    width: 100px;
+    justify-self: center;
+  }
 }
 
 #projects > div {
