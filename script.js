@@ -1,6 +1,7 @@
 const main = document.getElementsByTagName("main")[0];
 const header = document.getElementsByTagName("header")[0];
 const footer = document.getElementsByTagName("footer")[0];
+const projectsContainer = document.getElementById("projects").children[0];
 
 let number_of_star = Math.round((150 * (main.offsetHeight + screen.width)) / 1500);
 
@@ -40,8 +41,39 @@ let updateStars = function () {
   }
 };
 
-console.log(main.offsetHeight);
-createStars();
-updateStars();
+async function loadProjects(file) {
+  let projects = [];
+  await fetch(file)
+    .then((res) => res.json())
+    .then((data) => (projects = data));
+  console.log(projects);
+  for (let [title, project] of Object.entries(projects)) {
+    console.log(title, project);
+    let projectContainer = document.createElement("div");
+    projectContainer.className = "project";
 
-window.addEventListener("resize", updateStars);
+    projectContainer.innerHTML = `<h4 class="projectTitle">${title}</h4>
+            <img
+              class="projectImage"
+              src="${project["image"]}"
+              alt="${title}"
+            />
+            <p class="projectDesc">${project["desc"] == "" ? "Description" : project["desc"]}</p>`;
+    if (project["demo"] != "") {
+      projectContainer.innerHTML += `<a class="projectDemo" href="${project["demo"]}" target="_blank">Live Demo</a>
+            <a class="projectGithub" href="${project["github"]}" target="_blank">Github</a>`;
+    } else {
+      projectContainer.innerHTML += `<a class="projectGithub projectDemo" href="${project["github"]}" target="_blank">Github</a>`;
+    }
+
+    projectsContainer.append(projectContainer);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+  loadProjects("assets/projects.json");
+  createStars();
+  updateStars();
+
+  window.addEventListener("resize", updateStars);
+});
