@@ -16,7 +16,8 @@ let createStars = function () {
     let star_radius = random_number(0, 4);
     const star = document.createElement("div");
     star.className = "star";
-    star.style.top = (random_number(0, main.offsetHeight) + header.offsetHeight).toString() + "px";
+    star.style.top =
+      random_number(header.offsetHeight - 8, document.body.scrollHeight - footer.offsetHeight + 8).toString() + "px";
     star.style.left = random_number(0, screen.width).toString() + "px";
     star.style.height = star_radius.toString() + "px";
     star.style.width = star_radius.toString() + "px";
