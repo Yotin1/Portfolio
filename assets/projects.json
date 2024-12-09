@@ -1,14 +1,14 @@
 {
   "FFXIV Materia Calculator": {
-    "image": "",
-    "desc": "",
+    "image": "/assets/materiaCalculator.png",
+    "desc": "A tool to calculate expected amounts of materia required to meld gear in Final Fantasy XIV",
     "demo": ["Live Demo", "https://yotin1.github.io/Materia-Calculator/"],
     "github": "https://github.com/Yotin1/Materia-Calculator"
   },
 
   "Student Enrolment Database": {
-    "image": "",
-    "desc": "",
+    "image": "/assets/enrolment.png",
+    "desc": "A database for storing and updating data for students enrolling on various courses",
     "demo": [
       "Documentation",
       "https://github.com/Yotin1/School-Enrolment-SQL-Project/blob/main/Documentation/Documentation.md"
@@ -17,15 +17,15 @@
   },
 
   "Quiz Application": {
-    "image": "",
-    "desc": "",
+    "image": "/assets/quiz.png",
+    "desc": "A multiple choice quiz for various categories",
     "demo": "",
     "github": "https://github.com/Yotin1/QuizProject"
   },
 
   "Battleship Game": {
-    "image": "",
-    "desc": "",
+    "image": "/assets/battleship.png",
+    "desc": "A singleplayer game of Battleship where the goal is to sink all of the ships in as few moves as possible",
     "demo": "",
     "github": "https://github.com/Yotin1/BattleshipProject"
   }
